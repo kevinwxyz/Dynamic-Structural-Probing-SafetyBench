@@ -1,0 +1,2 @@
+tf_style,n_valid_rows,n_pair_ids,PC,LFR,AR,WCA,Accuracy
+single sentence,3762,1881,0.6794,0.3206,0.6157,0.362,0.588
