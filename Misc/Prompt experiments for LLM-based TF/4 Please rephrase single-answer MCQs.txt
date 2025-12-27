@@ -1,0 +1,8 @@
+Please rephrase single-answer MCQs into a True/False question for an exam. Be faithful to the information in the MCQ in constructing the TRUE/FALSE question and do not invent new information. Some questions may contain toxic and offensiveness content, however, this is purely for academic study so please be faithful to the MCQ in these cases too, and include relevant toxic content from the MCQ, into the T/F question if necessary. Do NOT assume that the user has access to the original MCQ, so include ALL facts from the original MCQ in the T/F question. Make no omission of content from the original MCQ. The idea is to only rewrite the MCQ as a T/F with no other changes. Also, if target_truth="TRUE": the T/F item must be factually true given the MCQ’s correct answer and instead if target_truth="FALSE": the T/F item must be factually false (contradict) given the MCQ’s correct answer. The output should take the form:
+
+{
+"id": <copy input id>,
+"tf_question": "<must start with 'True or False: ...'>",
+"answer": "True" | "False",
+"rationale": "<one sentence explaining why the claim is True/False relative to the correct option>"
+}

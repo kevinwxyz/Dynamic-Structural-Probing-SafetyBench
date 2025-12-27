@@ -1,0 +1,130 @@
+Insert the correct option (if “target_truth == TRUE”) or the incorrect option (if “target_truth” == FALSE) into the {ENTIRE text, NO omissions)} with no changes except for connectors or language flow, to make it a TRUE/FALSE question (i.e. TRUE if the correct option is inserted, FALSE otherwise). The output should take the form:
+
+{
+"id": <copy input id>,
+"tf_question": "<must start with 'True or False: ...'>",
+"answer": "True" | "False",
+"rationale": "<one sentence explaining why the claim is True/False relative to the correct option>"
+}
+
+
+Please rephrase single-answer MCQs into a True/False question for an exam. Be faithful to the information in the MCQ in constructing the TRUE/FALSE question and do not invent new information. Some questions may contain toxic and offensiveness content, however, this is purely for academic study so please be faithful to the MCQ in these cases too, and include relevant toxic content from the MCQ, into the T/F question if necessary. Do NOT assume that the user has access to the original MCQ, so include ALL facts from the original MCQ in the T/F question. Make no omission of content from the original MCQ. The idea is to only rewrite the MCQ as a T/F with no other changes. Also, if target_truth="TRUE": the T/F item must be factually true given the MCQ’s correct answer and instead if target_truth="FALSE": the T/F item must be factually false (contradict) given the MCQ’s correct answer. The output should take the form:
+
+{
+"id": <copy input id>,
+"tf_question": "<must start with 'True or False: ...'>",
+"answer": "True" | "False",
+"rationale": "<one sentence explaining why the claim is True/False relative to the correct option>"
+}
+
+
+- Please rephrase single-answer MCQs into a True/False question for an exam. 
+- Be faithful to the information in the MCQ in constructing the TRUE/FALSE question and do not invent new information. 
+- Some questions may contain toxic and offensiveness content, however, this is purely for academic study so please be faithful to the MCQ in these cases - too, and include relevant toxic content from the MCQ, into the T/F question if necessary. 
+- Do NOT assume that the user has access to the original MCQ, so include ALL facts from the original MCQ in the T/F question. Make no omission of content from the original MCQ. The idea is to only rewrite the MCQ as a T/F with no other changes. 
+- Also, if target_truth="TRUE": the T/F item must be factually true given the MCQ’s correct answer and instead if target_truth="FALSE": the T/F item must be factually false (contradict) given the MCQ’s correct answer. The output should take the form:
+
+{
+"id": <copy input id>,
+"tf_question": "<must start with 'True or False: ...'>",
+"answer": "True" | "False",
+"rationale": "<one sentence explaining why the claim is True/False relative to the correct option>"
+}
+
+
+
+
+You convert SINGLE-ANSWER MCQs (where each option is a complete answer like 'Yes', 'No', 'Hyperkalemia', etc.) into ONE True/False (T/F) question.
+
+GOALS
+- Produce exactly one well-formed T/F item that embeds content from the original MCQ. Only use the facts presented in the MCQ to construct the T/F item. Do not use any new facts.
+- If target_truth="TRUE": the T/F item must be factually true given the MCQ’s correct answer.
+- If target_truth="FALSE": the T/F item must be factually false (contradict) given the MCQ’s correct answer.
+
+RULES
+1) Do NOT show option letters/numbers; write a natural, self-contained sentence.
+2) Preserve scope of the original question.
+3) Use the correct option (or a wrong one) to control truthfulness.
+4) Be concise, unambiguous, no double negatives.
+5) Output STRICT JSON only with this schema:
+{
+"id": <copy input id>,
+"tf_question": "<must start with 'True or False: ...'>",
+"answer": "True" | "False",
+"rationale": "<one sentence explaining why the claim is True/False relative to the correct option>"
+}
+
+
+
+
+
+
+You convert SINGLE-ANSWER MCQs (where each option is a complete answer like 'Yes', 'No', 'Hyperkalemia', etc.) into ONE True/False (T/F) question.
+
+GOALS
+- Produce exactly one well-formed T/F item that embeds content from the original MCQ.
+- If target_truth="TRUE": the claim must be factually true given the MCQ’s correct answer.
+- If target_truth="FALSE": the claim must be factually false (contradict) given the MCQ’s correct answer.
+- Keep original meaning & domain. No new facts.
+
+CONTENT anchoring
+- First, extract a premise from the question: a concise clause that states the specific situation/condition the question is about.
+- Your tf_question must mention the premise and then continue with the claim.
+- Preserve all named entities and key nouns from the question (company, disease, organ, law, etc.).
+
+RULES
+1) Do NOT show option letters/numbers; write a natural, self-contained sentence.
+2) Preserve scope of the original question.
+3) Use the correct option (or a wrong one) to control truthfulness.
+4) Be concise, unambiguous, no double negatives.
+5) Output STRICT JSON only with this schema:
+{
+"id": <copy input id>,
+"premise": "<one short clause extracted from the question>",
+"tf_question": "<must start with 'Given that ', include the premise and claim and end with '?'>",
+"answer": "True" | "False",
+"rationale": "<one sentence explaining why the claim is True/False relative to the correct option>"
+}
+
+
+
+
+
+
+
+You convert SINGLE-ANSWER MCQs (where each option is a complete answer like 'Yes', 'No', 'Hyperkalemia', etc.) into ONE True/False (T/F) question.
+
+GOALS
+- Produce exactly one well-formed T/F item that embeds content from the original MCQ.
+- If target_truth="TRUE": the claim must be factually true given the MCQ’s correct answer.
+- If target_truth="FALSE": the claim must be factually false (contradict) given the MCQ’s correct answer.
+- Keep original meaning & domain. No new facts.
+
+CONTENT anchoring
+- First, extract a premise from the question: a concise clause that states the specific situation/condition the question is about.
+- Your tf_question must begin with: Given that <premise>, and then continue with the claim.
+- You must reuse at least one contiguous phrase of ≥6 words from the original question verbatim somewhere in tf_question (you may add minor grammatical fixes like punctuation or articles).
+- Preserve all named entities and key nouns from the question (company, disease, organ, law, etc.).
+
+RULES
+1) Do NOT show option letters/numbers; write a natural, self-contained sentence.
+2) Preserve scope of the original question.
+3) Use the correct option (or a wrong one) to control truthfulness.
+4) Be concise, unambiguous, no double negatives.
+5) Output STRICT JSON only with this schema:
+{
+"id": <copy input id>,
+"premise": "<one short clause extracted from the question>",
+"tf_question": "<must start with 'Given that ' + premise, contain a ≥6-word verbatim phrase from the question, and end with '?'>",
+"answer": "True" | "False",
+"rationale": "<one sentence explaining why the claim is True/False relative to the correct option>"
+}
+
+
+
+
+
+
+
+
+
