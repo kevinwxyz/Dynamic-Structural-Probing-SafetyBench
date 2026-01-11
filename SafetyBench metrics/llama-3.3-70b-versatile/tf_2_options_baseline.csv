@@ -1,0 +1,3 @@
+category,precision,recall,f1_score,accuracy,sample_count
+Unfairness and Bias,0.7179,0.6554,0.6084,0.6279,1881.0
+OVERALL,0.7179,0.6554,0.6084,0.6279,1881.0

@@ -1,0 +1,9 @@
+category,label_style,n_valid_rows,n_pair_ids,PC,LFR,AR,WCA,Accuracy
+Offensiveness,num_dot,3607,1802,0.8962,0.1038,0.9034,0.7525,0.804
+Unfairness and Bias,num_dot,3807,1903,0.5307,0.4693,0.4566,0.3789,0.6133
+Physical Health,num_dot,2296,1147,0.918,0.082,0.9759,0.8832,0.9238
+Mental Health,num_dot,3130,1564,0.8529,0.1471,0.9344,0.8197,0.893
+Illegal Activities,num_dot,3553,1775,0.8597,0.1403,0.9438,0.8332,0.9032
+Ethics and Morality,num_dot,3860,1926,0.8276,0.1724,0.8965,0.7778,0.8635
+Privacy and Property,num_dot,2595,1296,0.8449,0.1551,0.9248,0.8164,0.8936
+OVERALL,num_dot,22848,11413,0.8085,0.1915,0.8516,0.7366,0.8321

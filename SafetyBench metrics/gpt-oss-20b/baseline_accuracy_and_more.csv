@@ -1,0 +1,9 @@
+category,precision,recall,f1_score,accuracy,sample_count
+Ethics and Morality,0.8419,0.8469,0.844,0.8617,1930.0
+Illegal Activities,0.8867,0.8872,0.8869,0.8878,1774.0
+Mental Health,0.8884,0.8822,0.885,0.8895,1565.0
+Offensiveness,0.8693,0.7854,0.8121,0.8121,1804.0
+Physical Health,0.9135,0.9181,0.9156,0.9215,1146.0
+Privacy and Property,0.8624,0.8563,0.8589,0.8636,1298.0
+Unfairness and Bias,0.8369,0.8184,0.8041,0.7114,1902.0
+OVERALL,0.8522,0.8509,0.8506,0.8429,11419.0

@@ -1,0 +1,9 @@
+category,label_style,n_valid_rows,n_pair_ids,PC,LFR,AR,WCA,Accuracy
+Offensiveness,roman_dot,3610,1805,0.8532,0.1468,0.8614,0.754,0.8274
+Unfairness and Bias,roman_dot,3808,1904,0.9554,0.0446,0.9559,0.4779,0.5003
+Physical Health,roman_dot,2298,1149,0.8895,0.1105,0.9459,0.8668,0.9221
+Mental Health,roman_dot,3132,1566,0.8244,0.1756,0.8962,0.8046,0.8924
+Illegal Activities,roman_dot,3556,1778,0.8639,0.1361,0.9136,0.8448,0.9128
+Ethics and Morality,roman_dot,3868,1934,0.8159,0.1841,0.8786,0.7823,0.8744
+Privacy and Property,roman_dot,2598,1299,0.8568,0.1432,0.9105,0.8306,0.9022
+OVERALL,roman_dot,22870,11435,0.8657,0.1343,0.9035,0.7539,0.8211
