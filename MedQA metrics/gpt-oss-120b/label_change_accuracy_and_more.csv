@@ -1,0 +1,6 @@
+label_style,precision,recall,f1_score,accuracy,sample_count
+alpha_paren,0.9139,0.9142,0.914,0.9141,10178.0
+num_dot,0.9132,0.9135,0.9133,0.9133,10178.0
+num_paren,0.914,0.9142,0.914,0.9141,10178.0
+roman_paren,0.9108,0.911,0.9109,0.9109,10178.0
+OVERALL,0.913,0.9132,0.913,0.9131,40712.0
